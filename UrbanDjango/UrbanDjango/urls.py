@@ -16,17 +16,36 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from task2.views import func_template, ClassTemplate
 from django.views.generic import TemplateView
-from task3.views import shop_template, shoppingcart
+# from task2.views import func_template, ClassTemplate
+# from task3.views import shop_template, shoppingcart
+from task4.views import shop_template, shoppingcart
+
+# Task 4
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', TemplateView.as_view(
-        template_name='second_task/index.html')),
-    path('func/', func_template),
-    path('class/', ClassTemplate.as_view()),
-
-    path('', TemplateView.as_view(template_name='third_task/platform.html')),
+    path('', TemplateView.as_view(template_name='fourth_task/platform.html')),
     path('shop/', shop_template),
     path('shoppingcart/', shoppingcart)
 ]
+# Task 3
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('index/', TemplateView.as_view(
+#         template_name='second_task/index.html')),
+#     path('func/', func_template),
+#     path('class/', ClassTemplate.as_view()),
+#
+#     path('', TemplateView.as_view(template_name='third_task/platform.html')),
+#     path('shop/', shop_template),
+#     path('shoppingcart/', shoppingcart)
+# ]
+
+# Task 2
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('index/', TemplateView.as_view(
+#         template_name='second_task/index.html')),
+#     path('func/', func_template),
+#     path('class/', ClassTemplate.as_view()),
+# ]

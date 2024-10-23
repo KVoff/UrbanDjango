@@ -1,0 +1,27 @@
+{% extends "fourth_task/menu.html" %}
+
+{% block title %}Home - {{ block.super }}{% endblock %}
+
+
+{% block pagename %}
+    {{ block.super }}
+    <h2>Розыгрыш</h2>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <ul style="font-size: 20px">
+        {% for li in prizes %}
+            <li>{{ li }}
+                <button style="font-size: 18px">Крутите барабан!</button>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+{% endblock %}
