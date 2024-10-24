@@ -19,15 +19,23 @@ from django.urls import path
 from django.views.generic import TemplateView
 # from task2.views import func_template, ClassTemplate
 # from task3.views import shop_template, shoppingcart
-from task4.views import shop_template, shoppingcart
+# from task4.views import shop_template, shoppingcart
+from task5.views import  sign_up_by_html, sign_up_by_django
 
-# Task 4
+# Task 5
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='fourth_task/platform.html')),
-    path('shop/', shop_template),
-    path('shoppingcart/', shoppingcart)
+    path('', sign_up_by_html, name='html_sign_up'),
+    path('django_sign_up/', sign_up_by_django, name='django_sign_up'),
 ]
+
+# Task 4
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', TemplateView.as_view(template_name='fourth_task/platform.html')),
+#     path('shop/', shop_template),
+#     path('shoppingcart/', shoppingcart)
+# ]
 # Task 3
 # urlpatterns = [
 #     path('admin/', admin.site.urls),
